@@ -29,3 +29,8 @@ Item.instantiate_from_csv()
 def test_instantiate_from_csv():
     assert len(Item.all) == 7
 
+
+def test_repr():
+    assert repr(item1) == "Item('Смартфон', 8000.0, 20)"
+    assert str(item2) == 'Ноутбук'
+
