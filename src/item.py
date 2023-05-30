@@ -71,3 +71,10 @@ class Item:
         result = f"{self.name}"
         return result
 
+    def __add__(self, other):
+        if isinstance(other, Item):
+            return self.quantity + other.quantity
+        else:
+            raise ValueError
+
+

@@ -1,10 +1,12 @@
 """Здесь надо написать тесты с использованием pytest для модуля item."""
 import pytest
 from src.item import Item
+from src.phone import Phone
 
 
 item1 = Item("Смартфон", 10000, 20)
 item2 = Item("Ноутбук", 20000, 5)
+phone1 = Phone("iPhone 14", 120_000, 5, 2)
 
 
 def test_calculate_total_price():
@@ -27,10 +29,15 @@ Item.instantiate_from_csv()
 
 
 def test_instantiate_from_csv():
-    assert len(Item.all) == 7
+    assert len(Item.all) == 10
 
 
 def test_repr():
     assert repr(item1) == "Item('Смартфон', 8000.0, 20)"
     assert str(item2) == 'Ноутбук'
+
+
+def test_add():
+    assert item1 + phone1 == 25
+
 
