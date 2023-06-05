@@ -29,7 +29,7 @@ Item.instantiate_from_csv()
 
 
 def test_instantiate_from_csv():
-    assert len(Item.all) == 10
+    assert len(Item.all) == 11
 
 
 def test_repr():
@@ -39,5 +39,7 @@ def test_repr():
 
 def test_add():
     assert item1 + phone1 == 25
+
+
 
 
