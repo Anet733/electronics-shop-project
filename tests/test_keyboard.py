@@ -16,3 +16,5 @@ def test_change_lang():
     assert str(kb.language) == "EN"
     kb.change_lang()
     assert str(kb.language) == "RU"
+
+
